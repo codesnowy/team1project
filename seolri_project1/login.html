@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+<head>
+<meta charset="utf-8">
+<title>NextIT</title>
+<link rel="icon" type="image/x-icon" href="./img/icon/yoonsolremove.png">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+<style>
+    @font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+<script>
+
+    window.onload = function(){
+        let mem_id_tag = document.getElementById("mem_id");
+        let mem_pw_tag = document.getElementById("mem_pw");
+        console.log("mem_id_tag :" , mem_id_tag);
+
+        mem_id_tag.onclick = function(){
+            document.querySelector(".login_form label[for='mem_id'").classList.remove("warning");
+        }
+
+        mem_pw_tag.onclick = function(){
+            document.querySelector(".login_form label[for='mem_pw'").classList.remove("warning");
+        }
+    }
+
+
+    function login(){
+        let mem_id_tag = document.getElementById("mem_id").value;
+        console.log("mem_id_tag : " , mem_id_tag);
+
+        let mem_pw_tag = document.getElementById("mem_pw").value;
+        console.log("mem_pw_tag : " , mem_pw_tag);
+
+        let label_mem_id = document.querySelector(".login_form label[for='mem_id'");
+        console.log("label_mem_id : " , label_mem_id);
+
+        let label_mem_pw = document.querySelector(".login_form label[for='mem_pw'");
+        console.log("label_mem_pw : " , label_mem_pw);
+
+
+        if(mem_id_tag == null || mem_id_tag == undefined || mem_id_tag == ""){
+            alert("아이디가 입력되지 않았습니다.");
+            // 입력되지 않았을 때 경고 표시
+            label_mem_id.classList.add("warning");
+            return false;
+        }else if(mem_pw_tag == null || mem_pw_tag == undefined || mem_pw_tag == ""){
+            alert("비밀번호가 입력되지 않았습니다.");
+            label_mem_pw.classList.add("warning");
+            return false;
+        }else{
+            location.href="./home.html";
+        }
+    }
+
+</script>
+
+</head>
+
+<body>
+<div class="login_form">
+
+<h1>로그인 후 이용해주세요</h1>
+<form name="loginForm" action="">
+    <div class="int-area">
+        <input type="email" name="mem_id" id="mem_id" value="" autocomplete="off" required>
+        <label for="mem_id">이메일</label>  
+       
+    </div>
+    <div class="int-area">
+        <input type="password" name="mem_pw" id="mem_pw" autocomplete="off" required>
+        <label for="mem_pw">비밀번호</label>
+    </div>
+    <div class="buttons buttons2">
+        <button type="button" class="button1" onclick="login()">로그인</button>
+    </div>
+</form>
+<div class="caption">
+    <ul class="caption_ul">
+        <li>
+            <a href="#" onclick="join()">회원가입</a>
+        </li>
+        <li>
+            <a href="#" onclick="forgotPW()">비밀번호 찾기</a>
+        </li>
+    </ul>
+</div>
+</div>
+</body>
+</html>

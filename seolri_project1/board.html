@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="utf-8">    
+    <title>우리 술 윤술</title>
+    <link rel="icon" type="image/x-icon" href="./img/icon/yoonsolremove.png">
+    <link rel="stylesheet" type="text/css" href="./css/header.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style_board.css" />
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        window.onload = function(){
+            $("#page_footer").load("./footer.html");
+        }
+
+        function openCloseToc() {
+            if(document.getElementById('toc-content').style.display === 'block') {
+                document.getElementById('toc-content').style.display = 'none';
+            } else {
+                document.getElementById('toc-content').style.display = 'block';
+            }
+        }
+
+    </script>
+    </head>
+    <body>
+
+<div id="wrap">
+    <div class="header">
+        <div class="top_nav">
+            <div class="searchArea">
+                <form action="">
+                    <input type="text" id="input_search" name="input_search" value="" placeholder="Search">
+                    <span>검색</span>
+                </form>
+            </div>
+            <ul class="nav">
+                <li><a href="./home.html">처음으로</a></li>  
+                <li><a href="./sool_list.html">우리 술 소개</a></li>    
+                <li><a href="./bar_list.html">매장 찾기</a></li>
+                <li><a href="./board.html">소통하기</a></li>
+                <li><a href="./contact.html">알려주기</a></li>    
+                <li><a href="./homelogout.html">로그아웃</a></li>      
+            </ul> 
+        </div>
+    </div>
+    <!-- 헤더작업 끝 -->
+
+    <div class="intro_bg">
+        <div class="intro_text">
+            <h1>소통하기</h1>
+            <br>
+            <h4>자유롭게 이야기를 나누어 보세요</h4>
+        </div>
+    </div>
+
+    <!-- intro_bg 끝 -->
+
+    <!-- 게시판 -->
+
+    <div class="board">
+        <div class="title">
+            <h1>우리 술 자유게시판</h1>
+        </div>
+        <div class="div_border_write">
+            <input type="button" value="글쓰기" onclick="location.href='./board_write.html'">
+        </div>
+        <table class="div_board">
+            <colgroup>
+                <col width="50">
+                <col>
+                <!-- 남는 width 공간을 알아서 사용하라는 뜻 -->
+                <col width="180">
+                <col width="160">
+                <col width="80">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>날짜</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>24</td>
+                    <td>심플리애플 완전 인생술이에요!</td>
+                    <td>술러버</td>
+                    <td>2022.05.24</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>고흥유자주 드셔보신 분 계신가요?</td>
+                    <td>손님1321</td>
+                    <td>2022.05.24</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>비오는 날은 역시 막걸리쥬</td>
+                    <td>술독</td>
+                    <td>2022.05.24</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>막걸리 뭐가 맛있어요?</td>
+                    <td>술초보</td>
+                    <td>2022.05.24</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>친구들이랑 술파티 했습니당ㅋㅋ</td>
+                    <td>user122</td>
+                    <td>2022.05.24</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 게시판 끝 -->
+    <!-- 페이징 -->
+    <div class="div_paging">
+        <div class="page_nation">
+            <a href="#">&lt;&lt;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&gt;&gt;</a>
+        </div>
+        
+    </div>
+
+
+    <footer id="page_footer">
+        <!-- footer는 위에서 연결 -->
+    </footer>
+
+</div>
+</body>
+</html>
