@@ -1,0 +1,148 @@
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'HallymMjo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymMjo-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 auto;
+    padding: 0;
+    color: black;
+}
+.intro_bg{
+    width: 80%;
+    height: 800px;
+}
+
+.header{
+    width: 1280px;
+    height: 86px;
+    background-color: red;
+    display: flex;
+}
+.nav{
+    display: flex;
+}
+.nav > li{
+    margin-left: 84px;
+}
+.nav > li > a {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.searchArea{
+    width: 320px;
+    height: 40px;
+    background-color: green;
+    margin-top: 30px;
+}
+.nav{
+    margin-top: 30px;
+}
+.nav a:hover{
+    color: black;
+}
+.nav li ul{
+    margin-left: 10px;
+    display: none;
+}
+.nav li:hover ul{
+    display: block;
+    animation: fade-in .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.nav a{
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.searchArea > form > span{
+    width: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.searchArea > form > input{
+    width: 250px;
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background: white;
+    padding-left: 15px;
+}
+.intro_text{
+    width: 100%;
+    background-color: violet;
+    text-align: right;
+    position: relative;
+    top: 580px;
+    right: 50px;    
+}
+.intro_text > h1 ,  .intro_text > h4{
+    color: white;
+}
+
+.intro_text > h1 {
+    font-family: '국립박물관문화재단클래식B';
+    font-size: 45px;
+    padding-bottom: 10px;
+}
+
+.intro_text > h4{
+    font-family: 'HallymMjo-Regular';
+}
+
+.header, .nav, .searchArea, .intro_text{
+    background-color: transparent;
+}
+
+
+/* =============== GO TO TOP =============== */
+#scrollToTop {
+	width: 50px; 
+	height: 50px;
+	text-align: center;
+	text-decoration: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	text-indent: -99999em;
+	display: none;
+	cursor: pointer;
+	z-index: 2;
+	background: black url(../img/icon/go-to-top.png) center center no-repeat;
+}
+#scrollToTop:hover {
+	text-decoration: none;
+	background-color: black;
+}
