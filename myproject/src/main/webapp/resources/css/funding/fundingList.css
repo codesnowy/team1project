@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.fucategory{
+	margin-top : 50px;
+	margin-bottom : 50px;
+}
+
+#list , #sentinel{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20%, auto));
+	row-gap: 40px;
+	/* row의 간격을 10px로 */
+	column-gap: 20px;
+	/* column의 간격을 20px로 */
+}
+
+#paging{
+	margin-top : 50px;
+	margin-bottom : 50px;
+	width: 350px;
+}
+
+.funding{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 260px 3fr 1fr 1fr 1fr
+}
+
+.funding img{
+	border-radius: 5px;
+	padding-bottom: 10px;
+}
+
+.category, .amount, .fuDday {
+	color: gray;
+	font-size: small;
+}

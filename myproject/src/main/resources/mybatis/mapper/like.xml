@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.like.dao.ILikeDao">
+
+<select id="getTotalRowCount" resultType="int">
+	SELECT count(*)      
+	FROM mem_like
+	WHERE 1=1
+</select>
+
+<select id="getLikeList" parameterType="String" resultType="com.study.funding.vo.FundingVO">
+	SELECT    a.fu_no as fu_no
+        , fu_site        , fu_title        , fu_cate
+        , fu_enter       , fu_img          , fu_percent
+        , fu_amount      , fu_dday         , fu_url
+	FROM    mem_like a , funding b
+	WHERE  a.fu_no = b.fu_no
+	AND mem_id = #{memId}
+	ORDER BY like_no
+</select>
+
+<select id="checkLike" resultType="int">
+	SELECT count(*)
+	FROM    mem_like
+	where fu_no = #{fuNo}
+	and mem_id = #{memId}
+</select>
+
+<update id="insertLike" parameterType="com.study.like.vo.LikeVO">
+
+	INSERT INTO mem_like (
+	    like_no,	    mem_id,	    fu_no
+	) VALUES (
+	    like_seq.nextval,
+	    #{memId},
+	    #{fuNo}
+	)
+
+</update>
+
+<update id="deleteLike" parameterType="com.study.like.vo.LikeVO">
+	DELETE FROM mem_like
+	WHERE mem_id = #{memId}
+	AND fu_no = #{fuNo}
+</update>
+
+</mapper>

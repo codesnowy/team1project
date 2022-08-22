@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.fu_header{
+	text-align: center;
+   align-items: center;
+	height: 160px;
+   -webkit-box-align: center;
+}	
+
+.fu_header h2{
+	padding-top : 20px
+}
+
+#fu_item, #fu_img{	
+	height: 500px;
+}
+
+#fu_introduction{
+	margin-top : 40px
+}
+
+.option{
+	margin-top : 30px;
+	display : flex;
+ }
+ 
+.fu_title{
+	padding-top : 10px;
+}
+
+.btn.btn-primary.btn-lg{
+	width : 60%;
+}
+
+#addLike{
+	margin-bottom : 13px;
+}
+
+#heart {
+  color: red;
+}

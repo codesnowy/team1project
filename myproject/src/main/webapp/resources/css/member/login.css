@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.container {
+	width: 35%;
+	margin-top : 150px;
+}
+
+.text{
+	text-align: center;
+	margin-bottom : 20px
+}
+
+#btnLogin{
+	margin-left:225px
+}
